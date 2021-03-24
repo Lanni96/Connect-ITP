@@ -1,0 +1,58 @@
+<!-- <html>
+    <head>
+        <title><%= data.text %></title>
+    </head>
+    <body>
+        <h1 style="color: <%= data.color %>"><%= data.text %></h1>
+         <p>
+            <%= data.longtext %>
+        </p> -->
+                <!-- <p style="color: <%= data.color %>"><%= data.longtext %></p> -->
+
+
+       
+    <!-- </body>
+</html>
+ --> 
+
+ <html>
+    <head>
+        <!-- <title><%= data.longtext %></title> -->
+    </head>
+    <body>
+        <!-- <h1 style="color: <%= data.color %>"><%= data.longtext %></h1> -->
+        <p style="color: <%= data.color %>"><%= data.longtext %></p>
+        <p><%= data.text %></p>
+
+
+        <!-- <p>
+            <%= data.longtext %>
+        </p> -->
+            </div>
+        <% 
+        if (data.length > 0) {
+            for (var i = 0; i < data.length; i++) { 
+    %> 
+
+    <div id="dataout<%= i %>" style="color: <%= data[i].color %>"><a href="/displayrecord?_id=<%= data[i]._id %>"><%= data[i].longtext %></a></div>
+    <% 
+            } 
+        }
+    %>
+
+    <div class="search">
+        Search 
+        <form method="GET" action="/search">
+            <input type="text" name="q">
+            <input type="submit" value="Search for it">
+        </form>
+
+    </div>
+
+     
+      <!-- <script src="script.js"></script> -->
+    </body>
+</html>
+
+
+

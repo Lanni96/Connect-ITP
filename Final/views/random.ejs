@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+            .user_array{
+                position: relative;
+                text-align: center;
+                top:200px;
+            }
+            .search{
+                position: fixed;
+                left:1200px;
+                top:10px;
+
+            }
+            button{
+                position:fixed;
+                top:650px;
+                cursor: pointer;
+            }
+            .writeMore{
+                position: fixed;
+                left:1320px;
+                top:650px;
+            }
+       
+
+        </style>
+    </head>
+    <body>
+        <p style="color: <%= data.color %>"><%= data.longtext %></p>
+        <p><%= data.text %></p>
+
+
+      
+            </div>
+
+        <% 
+        var i = Math.floor(Math.random()*(data.length));
+
+    %> 
+
+    <!-- <div class="user_array" id="dataout<%= i %>" style="color: <%= data[i].color %>"><a href="/displayrecord?_id=<%= data[i]._id %>"><%= data[i].longtext %></a></div> -->
+  
+
+
+    <div>
+        <form method="GET" action="/getrandom">
+           <input type="submit" value="next">
+            <div class="user_array" id="dataout<%= i %>" style="color:<%= data[i].color %>"><%= data[i].longtext %>
+            </div>
+            <div class="user_array" id="dataout<%= i %>" style="color:<%= data[i].color %>"><%= data.text %>
+            </div>
+        </form>
+
+      </div>  
+     
+
+
+      <div class="search">
+        <form method="GET" action="/search">
+            <input type="text" name="q">
+            <input type="submit" value="find it">
+        </form>
+
+    </div>
+
+    <div class="writeMore">
+        <form method="POST" action ="/begin">
+        <input type="submit" name="submit" Value="write more"><br/>
+    </form>
+</div>
+
+<!-- <div class="exit"><a href="index.html">exit</a></div> -->
+<button type="button"><a href="index.html">Back to Home</a></button>
+
+
+      <!-- <script src="script.js"></script> -->
+    </body>
+</html>
