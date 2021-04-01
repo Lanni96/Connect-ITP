@@ -1,0 +1,18 @@
+#background{
+        background-color: aquamarine;
+        font-size: larger;
+        position: fixed;
+        text-align: center;
+        z-index: -3;
+        width:1400px;
+        height:1300px;
+    
+}
+
+input[type=submit]{
+    background-color: rgb(7, 20, 16);
+    font-size: larger;
+    position: fixed;
+    text-align: center;
+  
+}
